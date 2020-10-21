@@ -12,8 +12,8 @@ export const Ball = styled.div`
   border: 1px solid #00adef;
   position: absolute;
   background: ${(props) => props.filled};
-  top: -10px;
-  left: ${(props) => props.position};
+  top: ${(props) => props.positionTop};
+  left: ${(props) => props.positionLeft};
 `;
 
 export const Line = styled.div`
