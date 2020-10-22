@@ -8,7 +8,17 @@ import home from "../../global/assets/icons/home.svg";
 import about from "../../global/assets/icons/sobre.svg";
 import contact from "../../global/assets/icons/contato.svg";
 
-export default function Header({ title }) {
+export default function Header({ title, userName }) {
+  function loginWithGitHub(ev) {
+    ev.preventDefault();
+    window.open("http://localhost:4000/auth/github", "_self");
+  }
+
+  async function logOut(ev) {
+    ev.preventDefault();
+    fetch("http://localhost:4000/logout");
+  }
+
   return (
     <HeaderContainer>
       <div id="title">
@@ -20,6 +30,19 @@ export default function Header({ title }) {
           <img src={home} style={{ width: 23 }} alt=""></img>
           Início
         </Link>
+
+        {userName ? (
+          <button onClick={logOut}>
+            <img src={home} style={{ width: 23 }} alt=""></img>
+            Log Out
+          </button>
+        ) : (
+          <button onClick={loginWithGitHub}>
+            <img src={home} style={{ width: 23 }} alt=""></img>
+            Login in GitHub
+          </button>
+        )}
+
         <Link to="#">
           <img src={contact} alt=""></img>
           Contato

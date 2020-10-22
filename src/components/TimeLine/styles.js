@@ -9,7 +9,7 @@ export const Ball = styled.div`
   width: ${(props) => props.size};
   height: ${(props) => props.size};
   border-radius: 50%;
-  border: 1px solid #00adef;
+  border: 2px solid #00adef;
   position: absolute;
   background: ${(props) => props.filled};
   top: ${(props) => props.positionTop};
