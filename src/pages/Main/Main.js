@@ -24,18 +24,7 @@ export default function Main() {
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
             </article>
             <main>
-                <Link to='#'>
-                    <img src={projetos}></img>
-                    Projetos
-                </Link>
-                <Link to='#'>
-                    <img src={team}></img>
-                    Times
-                </Link>
-                <Link to='#'>
-                    <img src={blog}></img>
-                    Blog
-                </Link>
+                <div></div>
             </main>
         </MainContainer>
     );
