@@ -9,7 +9,8 @@ export default function Routes(){
     return(
         <Switch>
             <Route path='/' exact component={Main}></Route>
-            <Route path='/' exact component={Project}></Route>
+            <Route path='/projects' exact component={Project}></Route>
+            <Route path='/dashboard/maker'></Route>
         </Switch>
     );
 }

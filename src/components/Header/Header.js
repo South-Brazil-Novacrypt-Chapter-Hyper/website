@@ -51,7 +51,7 @@ export default function Header() {
                     menu.map(item => (
                         (location.pathname == item.path)
                             ?
-                            <Link to={item.path} style={{background: '#00ADEF'}} >
+                            <Link to={item.path} style={{background: '#00ADEFM'}} >
                                 <img src={item.url}></img>
                                 {item.title}
                             </Link>
