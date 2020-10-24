@@ -5,4 +5,4 @@ export const MakerContainer = styled.section`
     height: 100vh;
     display: grid;
     background-color: #000000;
-`;
+` ;
