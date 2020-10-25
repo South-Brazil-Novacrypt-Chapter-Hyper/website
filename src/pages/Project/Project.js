@@ -11,3 +11,5 @@ export default function Project(){
         </ProjectContainer>
     );
 }
+
+/* Página de exibição de projetos da NovaCrypt */

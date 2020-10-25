@@ -11,3 +11,5 @@ export default function Maker(){
         </MakerContainer>
     );
 }
+
+/* Página de criação de cadastro ! Coloca o teu código aqui Jaburu ! */
