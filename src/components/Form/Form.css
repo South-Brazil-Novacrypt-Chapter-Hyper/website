@@ -1,0 +1,147 @@
+* {
+    width: 100%;
+    height: 100%;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 55vh;
+    width: 100%;
+    background-color: #010E13;
+}
+
+.form__description {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -2vh;
+    height: 35vh;
+    width: 65%;
+    border: 1px solid #00ADEF;
+    margin: 0 auto;
+    background-color: #010E13;
+    z-index: 9;
+}
+
+.form__descriptionName {
+    display: flex;
+}
+
+.form__descriptionName span {
+    margin-top: 10px;
+    margin-left: 60px;
+    color: #fff;
+}
+
+.form__descriptionName input {
+    margin-top: 10px;
+    margin-right: 25px;
+    width: 450%;
+    height: 4vh;
+    border-radius: 4px;
+    background-color: #010E13;
+    border: 1px solid #00ADEF;
+    outline: 0;
+    color: white;
+}
+
+.form__descriptionPlatform {
+    display: flex;
+    position: relative;
+    top: -50px;
+    align-items: center;
+}
+
+.form__descriptionPlatform span {
+    color: #fff;
+    margin-left: 60px;
+    margin-top: 55px;
+}
+
+.spanNoMargin {
+    position: relative;
+    top: 3px;
+    color: #00ADEF !important;
+    margin-left: 10px !important;
+    text-align: left;
+    margin-top: 0;
+}
+
+.form__descriptionPlatform input {
+    position: relative;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid #00ADEF;
+    text-align: left;
+}
+
+.form__descriptionDescription {
+    position: relative;
+    top: -30px;
+    display: flex;
+}
+
+.form__descriptionDescription span {
+    color: #fff;
+    margin-left: 60px;
+}
+
+.form__descriptionDescription textarea {
+    width: 2000px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #010E13;
+    border: 1px solid #00ADEF;
+    outline: 0;
+    color: white;
+    resize: none;
+    padding-right: 50%;
+    margin-right: 5%;
+    margin-left: 2%;
+}
+
+.form__descriptionTwo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -2vh;
+    height: 20vh;
+    width: 65%;
+    border: 1px solid #00ADEF;
+    margin: 0 auto;
+    background-color: #010E13;
+    z-index: 9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.form__descriptionTwo p {
+    color: #00ADEF;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.form__descriptionTwo img {
+    align: right;
+    cursor: pointer;
+    transform: scale(0.9);
+    padding-left: 60%;
+    opacity: 0.7;
+    transition: 0.2s all ease-in-out;
+}
+
+.form__descriptionTwo img:hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+    .form__description {
+        width: 90%;
+    }
+    .form__descriptionTwo {
+        width: 90%;
+    }
+}
