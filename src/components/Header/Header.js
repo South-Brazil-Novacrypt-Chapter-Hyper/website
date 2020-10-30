@@ -1,7 +1,7 @@
 import React from "react";
 
 import { HeaderContainer } from "./styles";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import logo from "../../global/assets/icons/logo.svg";
 import home from "../../global/assets/icons/home.svg";
@@ -16,7 +16,20 @@ export default function Header({ title, userName }) {
 
   async function logOut(ev) {
     ev.preventDefault();
-    fetch("http://localhost:4000/logout");
+    const res = await fetch("http://localhost:4000/logout", {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
+      },
+    });
+    const response = res.json();
+    console.log("LOG OUT FRONT END");
+    console.log(response);
+
+    if (response.message) return <Redirect to="http://localhost:3000/" />;
   }
 
   return (

@@ -8,7 +8,7 @@ export default function Hello() {
   const [userName, setUserName] = useState();
 
   async function handleLogIn() {
-    const request = await fetch("http://localhost:4000/user", {
+    const response = await fetch("http://localhost:4000/user", {
       method: "GET",
       credentials: "include",
       headers: {
@@ -18,7 +18,7 @@ export default function Hello() {
       },
     });
 
-    const res = await request.json();
+    const res = await response.json();
     console.log(res);
     setUserName(res.user.displayName);
   }
