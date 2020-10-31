@@ -12,8 +12,13 @@ export const HeaderContainer = styled.section`
     align-items: center;
     div:first-child{
         display: flex;
-         align-items: center;
-        
+        align-items: center;
+        a{
+            transition: all 0.6s;
+            :hover{
+                opacity: 0.6;
+            }
+        }
         img{
             width: 60px;
             margin-right: 10px;
@@ -39,8 +44,13 @@ export const HeaderContainer = styled.section`
             text-decoration: none;
             color: white;
             font-weight: 500px;
+            border: 1px solid transparent;
             font-size: 13px;
             transition: all 0.3s;
+            outline: none;
+            :focus{
+                 border: 1px solid #1CC8EB;
+            }
             img{
                 width: 20px;
                 margin-right: 7px;
@@ -48,6 +58,9 @@ export const HeaderContainer = styled.section`
             :hover{
                 background: #00ADEF;
             }
+        }
+        @media(max-width: 750px){
+            display: none;
         }
     }
 `;

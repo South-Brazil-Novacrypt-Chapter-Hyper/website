@@ -5,6 +5,7 @@ export const MainContainer = styled.section`
     height: 100vh;
     background: url(${back});
     background-repeat: no-repeat;
+    background-position: center top;
     background-color: #000000;
     section{
         padding-top: 64px;
@@ -41,7 +42,7 @@ export const MainContainer = styled.section`
             font-family: Poppins, sans-serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 23px;
+            font-size: 19px;
             line-height: 32px;
             text-align: center;
             color: #E5E5E5;
@@ -50,7 +51,7 @@ export const MainContainer = styled.section`
         p{
             font-family: Ubuntu, sans-serif;
             font-style: normal;
-            font-size: 17px;
+            font-size: 14px;
             line-height: 23px;
             width: 100%;
             max-width: 400px;
@@ -90,7 +91,8 @@ export const MainContainer = styled.section`
             color: #1CC8EB;
             border: 2px solid transparent;
             transition: all 0.3s;
-            :hover{
+            outline: none;
+            :hover,:focus{
                  border: 2px solid #1CC8EB;
             }
             img{
