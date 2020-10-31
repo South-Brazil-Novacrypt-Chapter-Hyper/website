@@ -59,5 +59,8 @@ export const HeaderContainer = styled.section`
                 background: #00ADEF;
             }
         }
+        @media(max-width: 750px){
+            display: none;
+        }
     }
 `;
