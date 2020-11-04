@@ -14,7 +14,7 @@ export default function Launching() {
                 <img src={rocket} alt="Foguete"/>
                 <div>
                     <h1>Lauching Pad</h1>
-                    <p>The best launch platform for your ideas!</p>
+                    <p>The best launching platform for your ideas!</p>
                 </div>
             </div>
             <img src={step} className="launch__stepImg" alt="Imagem Step"/>
