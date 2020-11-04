@@ -9,18 +9,19 @@ export default function CreateProject() {
   const [status, setStatus] = useState("");
 
   async function handleAddProject(data) {
-    console.log("CALL: Handle Add Project");
     const response = await api.post("/project", data);
-    setStatus(response.status);
-    if (status === 200) {
-      console.log("Project Created", status);
+    try {
+      console.log(response);
+      setStatus(response.status)
+    } catch (err) {
+      console.log(err);
     }
   }
 
   return (
     <MakerContainer>
       <Launching />
-      <FormCreate onSubmit={handleAddProject} />
+      <FormCreate onSubmit={handleAddProject} status={status} />
     </MakerContainer>
   );
 }

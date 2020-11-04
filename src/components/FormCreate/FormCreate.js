@@ -1,16 +1,23 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-import { FormCreateContainer } from "./styles";
+import { FormCreateContainer, Created } from "./styles";
 
 import createsubmit from "../../global/assets/icons/createsubmit.svg";
 
-export default function FormCreate({ onSubmit }) {
+export default function FormCreate({ onSubmit, status }) {
   const [name, setProjectName] = useState("");
   const [platform, setPlatform] = useState([]);
   const [description, setDescription] = useState("");
   const [scope, setScope] = useState("");
-  const accounts = 12345;
+  const [accounts, setAccounts] = useState([1, 2]);
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (status === 201) {
+      setSuccess(true);
+    }
+  }, [status]);
 
   function setCheckbox(value, checked) {
     if (checked) {
@@ -23,7 +30,7 @@ export default function FormCreate({ onSubmit }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-
+    console.log("CALL: handleSubmit");
     await onSubmit({
       name,
       platform,
@@ -31,6 +38,12 @@ export default function FormCreate({ onSubmit }) {
       scope,
       accounts,
     });
+
+    setProjectName("");
+    setPlatform([]);
+    setDescription("");
+    setScope("");
+    setAccounts([]);
   }
 
   return (
@@ -132,8 +145,14 @@ export default function FormCreate({ onSubmit }) {
         <footer>
           <div>
             <div id="submit">
-              <img src={createsubmit}></img>
-              <button type="submit">Ready &amp; Go!</button>
+              {!success ? (
+                <>
+                  <img src={createsubmit} />
+                  <button type="submit">Ready &amp; Go!</button>
+                </>
+              ) : (
+                <Created>Created!</Created>
+              )}
             </div>
           </div>
         </footer>

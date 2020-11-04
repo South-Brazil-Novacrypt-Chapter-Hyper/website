@@ -109,7 +109,7 @@ export const FormCreateContainer = styled.form`
         font-size: 1.2em;
         font-weight: bold;
         color: #00adef;
-        transition: all 0.2s
+        transition: all 0.2s;
       }
       button[type="submit"]:hover {
         background-color: #00adef;
@@ -118,4 +118,16 @@ export const FormCreateContainer = styled.form`
       }
     }
   }
+`;
+
+export const Created = styled.div`
+  border: 1px solid #00adef;
+  border-radius: 10px;
+  padding: 25px;
+  background-color: transparent;
+  color: #00adef;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
 `;
