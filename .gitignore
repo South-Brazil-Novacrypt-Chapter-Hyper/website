@@ -1,1 +1,3 @@
 node_modules
+.theia
+package-lock.json

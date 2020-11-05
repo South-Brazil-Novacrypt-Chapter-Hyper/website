@@ -5,7 +5,7 @@ export const HeaderContainer = styled.section`
     position: fixed;
     top: 0;
     z-index: 9;
-    background: #15191E;
+    background: black;
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
@@ -24,7 +24,7 @@ export const HeaderContainer = styled.section`
             margin-right: 10px;
         }
         span{
-            font-family: Poppins;
+            font-family: Open Sans;
             font-size: 16px;
             color: white;
             font-weight: 500;
@@ -40,7 +40,7 @@ export const HeaderContainer = styled.section`
             border-radius: 5px;
             justify-content: center;
             margin-right: 35px;
-            font-family: Exo, sans-serif;
+            font-family: Open Sans, sans-serif;
             text-decoration: none;
             color: white;
             font-weight: 500px;
